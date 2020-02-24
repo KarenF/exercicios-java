@@ -7,6 +7,9 @@ import java.util.Scanner;
 
 /*
 Faça um programa que leia 5 números e informe o maior número.
+
+Faça um programa que leia 5 números e informe a soma e a média
+dos números.
  */
 public class MaiorNumero {
 
@@ -21,8 +24,11 @@ public class MaiorNumero {
 		}
 		
 		numeros.sort((s1, s2) -> Integer.compare(s1, s2));
-		
 		System.out.println("Maior número digitado: " + Collections.max(numeros));
+		
+		double somaNumeros = numeros.stream().mapToInt(Integer::intValue).sum();
+		System.out.println("Soma dos números: " + somaNumeros);
+		System.out.println("Média dos números: " + somaNumeros/5);
 	}
 
 }
