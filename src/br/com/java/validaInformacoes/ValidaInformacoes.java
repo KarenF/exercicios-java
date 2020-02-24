@@ -25,6 +25,9 @@ public class ValidaInformacoes {
 		
 		char genero = validacoes.validaGenero();
 		System.out.println("Gênero: " + genero);
+
+		char estadoCivil = validacoes.validaEstadoCivil();
+		System.out.println("Estado civil: " + estadoCivil);
 	}
 
 }

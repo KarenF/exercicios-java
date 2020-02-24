@@ -74,4 +74,31 @@ public class Validacoes {
 
 		return genero;
 	}
+	
+	public char validaEstadoCivil() {
+
+		char estadoCivil;
+
+		do {
+			System.out.println("Insira o estado civil: ");
+			estadoCivil = scanner.next().charAt(0);
+			char upperEstadoCivil = Character.toUpperCase(estadoCivil);
+			
+			switch (upperEstadoCivil) {
+			case 'S':
+				return estadoCivil;
+			case 'C':
+				return estadoCivil;
+			case 'V':
+				return estadoCivil;
+			case 'D':
+				return estadoCivil;
+			default:
+				System.out.println("Opções de estado civil: s - c - v - d");
+			}
+
+		} while ("sScCvVdD".indexOf(estadoCivil) != 1);
+
+		return estadoCivil;
+	}
 }
