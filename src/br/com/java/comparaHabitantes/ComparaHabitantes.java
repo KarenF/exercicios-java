@@ -1,5 +1,7 @@
 package br.com.java.comparaHabitantes;
 
+import java.util.Scanner;
+
 /*
 Supondo que a população de um país A seja da ordem de 80000
 habitantes com uma taxa anual de crescimento de 3% e que a
@@ -12,17 +14,37 @@ public class ComparaHabitantes {
 
 	public static void main(String[] args) {
 
-		double populacaoA = 80000;
-		double populacaoB = 200000;
+		Scanner scanner = new Scanner(System.in);
+		int populacaoA;
+		int populacaoB;
 		int anos = 0;
+		char repetirComparacao;
 
 		do {
-			populacaoA += (populacaoA * 0.03);
-			populacaoB += (populacaoB * 0.015);
-			anos++;
-		} while (populacaoA < populacaoB);
+			System.out.println("Adiciona o número de habitantes do país A: ");
+			populacaoA = scanner.nextInt();
+			System.out.println("Adiciona o número de habitantes do país B: ");
+			populacaoB = scanner.nextInt();
+			
+			System.out.println("Adiciona a taxa anual de crescimento do país A: ");
+			double taxaCrescimentoA = scanner.nextDouble();
+			System.out.println("Adiciona a taxa anual de crescimento do país B: ");
+			double taxaCrescimentoB = scanner.nextDouble();
+			do {
+				populacaoA += (populacaoA * taxaCrescimentoA);
+				populacaoB += (populacaoB * taxaCrescimentoB);
+				anos++;
+			} while (populacaoA < populacaoB);
 
-		System.out.println("Anos necessários para a população do país A ultrapassar a população do país B: " + anos);
+			System.out
+					.println("Anos necessários para a população do país A ultrapassar a população do país B: " + anos);
+			anos = 0;
+			System.out.println("Você deseja realizar nova comparação? (S/s para sim)");
+			repetirComparacao = scanner.next().charAt(0);
+		} while (repetirComparacao == 'S' || repetirComparacao == 's');
+
+		if(repetirComparacao != 'S' || repetirComparacao != 's')
+			System.out.println("Fim");
 	}
 
 }
