@@ -1,9 +1,5 @@
 package br.com.java.validaInformacoes;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
 /*
 Faça um programa que leia e valide as seguintes informações:
 a. Nome: maior que 3 caracteres;
@@ -23,6 +19,12 @@ public class ValidaInformacoes {
 		
 		int idade = validacoes.validaIdade();
 		System.out.println("Idade: " + idade);
+
+		String salario = validacoes.validaSalario();
+		System.out.println("Salário: " + salario);
+		
+		char genero = validacoes.validaGenero();
+		System.out.println("Gênero: " + genero);
 	}
 
 }

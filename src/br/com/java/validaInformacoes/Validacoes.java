@@ -32,4 +32,46 @@ public class Validacoes {
 
 		return idade;
 	}
+
+	public String validaSalario() {
+
+		String salario = "0";
+
+		try {
+			do {
+				System.out.println("Insira o salário: ");
+				salario = scanner.next();
+				if (Integer.valueOf(salario) <= 0)
+					System.out.println("O salário deve ser maior do que 0");
+			} while (Integer.valueOf(salario) <= 0);
+		} catch (Exception e) {
+			return salario;
+		}
+		return salario;
+	}
+
+	public char validaGenero() {
+
+		char genero;
+
+		do {
+			System.out.println("Insira o gênero: ");
+			genero = scanner.next().charAt(0);
+			char upperGenero = Character.toUpperCase(genero);
+			
+			switch (upperGenero) {
+			case 'M':
+				return genero;
+			case 'F':
+				return genero;
+			case 'O':
+				return genero;
+			default:
+				System.out.println("Opções de gênero: m - f - o");
+			}
+
+		} while ("mMfFoO".indexOf(genero) != 1);
+
+		return genero;
+	}
 }
