@@ -29,6 +29,8 @@ public class MaiorNumero {
 		double somaNumeros = numeros.stream().mapToInt(Integer::intValue).sum();
 		System.out.println("Soma dos números: " + somaNumeros);
 		System.out.println("Média dos números: " + somaNumeros/5);
+		
+		scanner.close();
 	}
 
 }

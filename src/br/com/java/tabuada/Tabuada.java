@@ -21,6 +21,8 @@ public class Tabuada {
 
 			System.out.println(numero + " X " + i + " = " + numero*i);
 		}
+		
+		scanner.close();
 	}
 
 }

@@ -34,5 +34,7 @@ public class CalculaPotencia {
 		}
 
 		System.out.println("Resultado: " + resultado);
+		
+		scanner.close();
 	}
 }

@@ -21,6 +21,8 @@ public class ValidaNotas {
 		} while (nota < 0 || nota > 10);
 		
 		System.out.println("Nota final: " + nota);
+		
+		scanner.close();
 	}
 
 }

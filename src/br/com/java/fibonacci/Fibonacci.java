@@ -29,6 +29,8 @@ public class Fibonacci {
 			System.out.println("Fibonacci " + i + ": " + Fibonacci.fibo(i));
 			i++;
 		} while(Fibonacci.fibo(i) <= 610);
+		
+		scanner.close();
 	}
 
 	static long fibo(int n) {

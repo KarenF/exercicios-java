@@ -49,6 +49,8 @@ public class ComparaHabitantes {
 
 		if(repetirComparacao != 'S' || repetirComparacao != 's')
 			System.out.println("Fim");
+		
+		scanner.close();
 	}
 
 }

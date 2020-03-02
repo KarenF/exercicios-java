@@ -16,6 +16,7 @@ public class Validacoes {
 			if (nome.length() < 4)
 				System.out.println("O nome deve conter mais do que 3 caracteres");
 		} while (nome.length() < 4);
+		
 		return nome;
 	}
 
@@ -47,6 +48,7 @@ public class Validacoes {
 		} catch (Exception e) {
 			return salario;
 		}
+		
 		return salario;
 	}
 
@@ -99,6 +101,7 @@ public class Validacoes {
 
 		} while ("sScCvVdD".indexOf(estadoCivil) != 1);
 
+		scanner.close();
 		return estadoCivil;
 	}
 }

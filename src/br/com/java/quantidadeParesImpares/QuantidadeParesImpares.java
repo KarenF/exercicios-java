@@ -29,6 +29,8 @@ public class QuantidadeParesImpares {
 		}
 		System.out.println("Quantidade de números pares: " + numerosPares);
 		System.out.println("Quantidade de números ímpares: " + numerosImpares);
+		
+		scanner.close();
 	}
 
 }

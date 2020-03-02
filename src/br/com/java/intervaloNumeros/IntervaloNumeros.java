@@ -41,5 +41,7 @@ public class IntervaloNumeros {
 			System.out.println("Não há intervalo de números");
 			System.out.println("Soma total dos números: " + somaTotal);
 		}
+		
+		scanner.close();
 	}
 }

@@ -22,6 +22,8 @@ public class NomeSenha {
 		} while (nome.equals(senha));
 		
 		System.out.println("Nome: " + nome + " - Senha: " + senha);
+		
+		scanner.close();
 	}
 
 }
